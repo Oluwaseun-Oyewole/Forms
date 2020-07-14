@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'employee/emp.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %} Employee Detail Page{% endblock %}</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<body>
+
+<div class="container">
+        <div class="col-md-6 offset-2 mt-5" >
+            <div class="jumbotron">
+              <h1 class="display-4">Employee Register</h1>
+              <p class="lead font-italic">Django crud operation tutorial</p>
+              <hr class="my-4">
+                {% block body%}
+                {% endblock %}
+        </div>
+        </div>
+    </div>
+
+<div style="margin-top:750px;"></div>
+</body>
+</html>

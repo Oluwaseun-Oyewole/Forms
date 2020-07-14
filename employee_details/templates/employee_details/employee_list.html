@@ -1,0 +1,29 @@
+{% extends 'employee_details/base.html' %}
+{% block body%}
+    <p>Will display a list of employees very soon</p>
+         <table class="table table-hover table-borderless">
+          <thead class="border-bottom font-weight-bold">
+            <tr>
+              <td>Full Name</td>
+              <td>Mobile</td>
+              <td>Position</td>
+              <td>Delete</td>
+              <td>Edit</td>
+            </tr>
+          </thead>
+          <tbody>
+             {% for emp in employees %}
+                <tr>
+                    <td>{{ emp.fullname }}</td>
+                    <td>{{ emp.mobile }}</td>
+                    <td>{{ emp.position }}</td>
+<!--                    <td><a href="" class="btn text-secondary px-0">-->
+<!--                        <i class="far fa-edit fa-lg"></i>-->
+<!--                    </a></td>-->
+                    <td><a href="{% url 'employee_delete' emp.id %}">Delete</a></td>
+                    <td><a href="{% url 'employee_update' emp.id%}">Edit</a></td>
+                </tr>
+             {% endfor %}
+          </tbody>
+        </table>
+{% endblock%}
